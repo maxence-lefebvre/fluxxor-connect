@@ -13,8 +13,10 @@
     "clean:doc": "rimraf docs",
     "jsdoc": "jsdoc -c jsdoc.conf.json",
     "doc": "npm run clean:doc && npm run jsdoc",
-    "lint" : "eslint **/src/** -o ./test/eslint.html -f html",
-    "lint:fix" : "eslint --fix **/src/** -o ./test/eslint.html -f html"
+    "lint": "eslint **/src/** -o ./test/eslint.html -f html",
+    "lint:fix": "eslint --fix **/src/** -o ./test/eslint.html -f html",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,7 +39,8 @@
     "lodash.foreach": "^4.5.0",
     "lodash.merge": "^4.6.0",
     "lodash.reduce": "^4.6.0",
-    "react": "^15.4.2"
+    "react": "^15.4.2",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
@@ -54,5 +57,6 @@
     "jsdoc": "^3.4.3",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.5.4"
-  }
+  },
+  "snyk": true
 }
